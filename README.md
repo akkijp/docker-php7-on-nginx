@@ -20,7 +20,7 @@ This repository contains **Dockerfile** of [Nginx](http://nginx.org/) for [Docke
 
 ### Usage
 
-    docker run -d -p 80:80 k4zzk/nginx
+    docker run --privileged -d -p 80:80 k4zzk/nginx
 
 #### Attach persistent/shared directories
 
