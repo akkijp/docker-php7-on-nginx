@@ -25,7 +25,7 @@ VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/v
 WORKDIR /etc/nginx
 
 # Define default command.
-ENTRYPOINT ["/usr/sbin/nginx", "-g", "'daemon off;'", "-c", "/etc/nginx/nginx.conf"]
+CMD ["/usr/sbin/nginx", "-g", "'daemon off;'", "-c", "/etc/nginx/nginx.conf"]
 
 # Expose ports.
 EXPOSE 80
