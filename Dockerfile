@@ -1,7 +1,7 @@
 #
 # Nginx Dockerfile
 #
-# https://github.com/dockerfile/nginx
+# https://github.com/k4zzk/docker-nginx
 #
 
 # Pull base image.
