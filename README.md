@@ -24,6 +24,9 @@ This repository contains **Dockerfile** of [Nginx](http://nginx.org/) for [Docke
 
 #### Attach persistent/shared directories
 
-    ./docker-run.sh
+```bash
+git clone https://github.com/k4zzk/docker-nginx.git && cd docker-nginx
+./docker-run.sh
+```
 
 After few seconds, open `http://<host>` to see the welcome page.
