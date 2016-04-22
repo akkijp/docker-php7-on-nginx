@@ -33,6 +33,9 @@ After few seconds, open `http://<host>` to see the welcome page.
 
 ### Note
 
+Nginx Version: 1.8.1-1+trusty0
+Configuration in this version.
+
 ```nginx.conf
 $ cat /etc/nginx/nginx.conf
 
