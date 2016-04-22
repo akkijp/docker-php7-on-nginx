@@ -6,6 +6,7 @@
 
 # Pull base image.
 FROM ubuntu:14.04
+MAINTAINER Kosuke Akizuki
 
 # Install Nginx.
 RUN \
@@ -24,7 +25,7 @@ VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/v
 WORKDIR /etc/nginx
 
 # Define default command.
-CMD ["nginx"]
+ENTRYPOINT ["/usr/sbin/nginx", "-g", "'daemon off;'", "-c", "/etc/nginx/nginx.conf"]
 
 # Expose ports.
 EXPOSE 80
