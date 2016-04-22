@@ -6,7 +6,7 @@
 
 # Pull base image.
 FROM ubuntu:14.04
-MAINTAINER Kosuke Akizuki
+MAINTAINER Kosuke Akizuki <thehackerslog.gmail.com>
 
 # Install Nginx.
 RUN \
