@@ -10,9 +10,12 @@ MAINTAINER Kosuke Akizuki <thehackerslog.gmail.com>
 
 # Install Nginx.
 RUN \
+  apt-get update && apt-get upgrade
+RUN \
   apt-get install -y software-properties-common && \
   add-apt-repository -y ppa:nginx/stable && \
-  apt-get update && \
+  apt-get update
+RUN \
   apt-get install -y nginx && \
   rm -rf /var/lib/apt/lists/* && \
   chown -R www-data:www-data /var/lib/nginx
