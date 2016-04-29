@@ -1,6 +1,8 @@
 
-www
+html
 log
 certs
 conf.d
+
+docker-nginx.pid
 
