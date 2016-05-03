@@ -8,6 +8,7 @@
 FROM ubuntu:14.04
 MAINTAINER Kosuke Akizuki <thehackerslog.gmail.com>
 
+# from http://askubuntu.com/questions/393638/unicodedecodeerror-ascii-codec-cant-decode-byte-0x-in-position-ordinal-n
 ENV LANG=en_US.UTF-8
 
 RUN \
