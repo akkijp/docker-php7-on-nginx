@@ -22,7 +22,6 @@ RUN \
   add-apt-repository -y ppa:nginx/stable && \
   apt-get update && \
   apt-get install -y nginx && \
-  rm -rf /var/lib/apt/lists/* && \
   chown -R www-data:www-data /var/lib/nginx
 
 # Install php7.
@@ -31,6 +30,10 @@ RUN \
   add-apt-repository -y ppa:ondrej/php && \
   apt-get update && \
   apt-get install -y php7.0 php7.0-fpm
+
+# Cleanup
+RUN \
+  rm -rf /var/lib/apt/lists/*
 
 # Define mountable directories.
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/usr/share/nginx/html"]
