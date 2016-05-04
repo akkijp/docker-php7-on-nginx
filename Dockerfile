@@ -31,7 +31,7 @@ RUN \
   apt-get update && \
   apt-get install -y php7.0 php7.0-fpm && \
   sed -i -e "s/;\?mbstring[.]language.*/mbstring.language = Japanese/g" /etc/php/7.0/fpm/php.ini && \
-  sed -i -e "s/;\?date[.]timezone.*/date.timezone = \"Asia/Tokyo\"/g" /etc/php/7.0/fpm/php.ini && \
+  sed -i -e "s/;\?date[.]timezone.*/date.timezone = \"Asia\/Tokyo\"/g" /etc/php/7.0/fpm/php.ini && \
   sed -i -e "s/;\?default_charset/default_charset = \"UTF-8\"/g" /etc/php/7.0/fpm/php.ini && \
   mkdir -p /run/php
 
