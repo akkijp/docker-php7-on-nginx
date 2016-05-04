@@ -29,7 +29,8 @@ RUN \
 RUN \
   add-apt-repository -y ppa:ondrej/php && \
   apt-get update && \
-  apt-get install -y php7.0 php7.0-fpm
+  apt-get install -y php7.0 php7.0-fpm && \
+  mkdir -p /run/php
 
 # Cleanup
 RUN \
@@ -42,7 +43,7 @@ VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/v
 WORKDIR /etc/nginx
 
 # Define default command.
-CMD ["nginx", "-g", "daemon off;"]
+CMD php-fpm7.0 && nginx -g "daemon off;"
 
 # expose both the HTTP (80) and HTTPS (443) ports
 EXPOSE 80 443
