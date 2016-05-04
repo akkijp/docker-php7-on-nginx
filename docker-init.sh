@@ -12,7 +12,7 @@ do_run() {
   -v $scriptDir/log:/var/log/nginx \
   -v $scriptDir/html:${nginxRoot}/html \
   -e NGINX_ROOT=${nginxRoot} \
-  k4zzk/nginx > $pidFile
+  k4zzk/php7-on-nginx > $pidFile
 }
 
 do_remove() {
