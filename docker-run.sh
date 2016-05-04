@@ -10,7 +10,7 @@ docker run --privileged -d -p 80:80 \
 -v $scriptDir/log:/var/log/nginx \
 -v $scriptDir/html:${nginxRoot}/html \
 -e NGINX_ROOT=${nginxRoot} \
-k4zzk/nginx > docker-nginx.pid
+k4zzk/php7-on-nginx > docker-nginx.pid
 
 ret=$?
 if [ ! $ret -eq 0 ] ;then
