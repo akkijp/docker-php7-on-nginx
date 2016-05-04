@@ -8,4 +8,3 @@ else
 fi
 
 docker stop $pid
-

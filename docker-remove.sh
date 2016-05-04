@@ -8,4 +8,3 @@ else
 fi
 
 docker rm $pid
-
