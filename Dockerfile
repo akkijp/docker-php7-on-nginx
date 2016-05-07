@@ -6,7 +6,7 @@
 
 # Pull base image.
 FROM ubuntu:14.04
-MAINTAINER Kosuke Akizuki <thehackerslog.gmail.com>
+MAINTAINER Kosuke Akizuki <thehackerslog@gmail.com>
 
 # from http://askubuntu.com/questions/393638/unicodedecodeerror-ascii-codec-cant-decode-byte-0x-in-position-ordinal-n
 ENV LANG=ja_JP.UTF-8
@@ -31,7 +31,7 @@ RUN \
   apt-get update && \
   apt-get install -y php7.0 php7.0-fpm && \
   sed -i -e "s/;\?mbstring[.]language.*/mbstring.language = Japanese/g" /etc/php/7.0/fpm/php.ini && \
-  sed -i -e "s/;\?date[.]timezone.*/date.timezone = \"Asia/Tokyo\"/g" /etc/php/7.0/fpm/php.ini && \
+  sed -i -e "s/;\?date[.]timezone.*/date.timezone = \"Asia\/Tokyo\"/g" /etc/php/7.0/fpm/php.ini && \
   sed -i -e "s/;\?default_charset/default_charset = \"UTF-8\"/g" /etc/php/7.0/fpm/php.ini && \
   mkdir -p /run/php
 
