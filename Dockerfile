@@ -1,7 +1,7 @@
 #
 # Nginx Dockerfile
 #
-# https://github.com/k4zzk/docker-nginx
+# https://github.com/k4zzk/docker-php7-on-nginx
 #
 
 # Pull base image.
