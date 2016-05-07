@@ -11,6 +11,7 @@ do_run() {
   -v $scriptDir/certs:/etc/nginx/certs \
   -v $scriptDir/log:/var/log/nginx \
   -v $scriptDir/html:${nginxRoot}/html \
+  --link apt_cacher_ng:apt_proxy -e http_proxy=http://apt_proxy:3142 \
   -e NGINX_ROOT=${nginxRoot} \
   k4zzk/php7-on-nginx > $pidFile
 }
